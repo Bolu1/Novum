@@ -1,16 +1,45 @@
-import React from "react";
+import React, {useState} from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { AiFillMail, AiFillPhone } from "react-icons/ai";
+import carf from "../../assets/images/home/carf.png"
 import { BiPhoneCall } from "react-icons/bi";
 import { FaFax } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { TbWorld } from "react-icons/tb";
+import axios from "axios"
 
 const Contact = ({toast}) => {
 
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [date, setDate] = useState("")
+  const [time, setTime] = useState("")
+  const [message, setMessage] = useState("")
+  const [loading, setLoading] = useState(false)
+
   const submithandler = async(e) =>{
     e.preventDefault();
-    toast.success("Submitted")
+    console.log("sd")
+    setLoading(true)
+    try{
+
+      await axios.post(
+        `https://vcb-server.onrender.com/api/admin/novum/mail`,
+        {
+          name,
+          email,
+          date,
+          time,
+          message
+        }
+      );
+    setLoading(false)
+      toast.success("Submitted")
+    }catch(error){
+      console.log(error)
+    setLoading(false)
+      toast.error("Something went wrong")
+    }
   }
 
   return (
@@ -41,7 +70,7 @@ const Contact = ({toast}) => {
               </motion.p>
               </div>
           </div>
-          <div className="w-full h-60 space-y-3 max-w-[65rem] mx-auto  mt-10">
+          <div className="w-full h-60 space-y-3 max-w-[65rem] mx-auto  my-20">
           <div className="w-full items-center text-lg flex space-x-4">
               <IoLocationSharp className="w-6 h-6" />
               <p className="text:xs">Address: 1404 Crain Highway South Suite 112 Glen Burnie MD 21061</p>
@@ -56,10 +85,10 @@ const Contact = ({toast}) => {
             </div>
             <div className="w-full items-center text-lg flex space-x-4">
               <AiFillMail className="w-6 h-6" />
-              <h1
-
+              <a
+                href="mailto:info@novumhealthservices.com"
                className="text-blue-600 underline"
-              >info@novumhealthservices.com</h1>
+              >info@novumhealthservices.com</a>
             </div>
             <div className="w-full items-center text-lg flex space-x-4">
               <TbWorld className="w-6 h-6" />
@@ -69,6 +98,13 @@ const Contact = ({toast}) => {
               className="text-blue-600 underline"
               >www.novumhealthservices.com</a>
             </div>
+
+            <div>
+            <img
+            className="h-15 w-20 my-4"
+              src={carf}
+            />
+            </div>
           </div>
           <form 
           onSubmit={(e)=>{submithandler(e)}}
@@ -77,6 +113,7 @@ const Contact = ({toast}) => {
               <h1 className="text-xl">Name</h1>
               <input
                 type="text"
+                onChange={(e)=>{setName(e.target.value)}}
                 required
                 className="border-b py-2 px-3 white outline-none bg-transparent"
               />
@@ -85,16 +122,7 @@ const Contact = ({toast}) => {
               <h1 className="text-xl">Email Address</h1>
               <input
                 type="email"
-                required
-                className="border-b py-2 px-3 white outline-none bg-transparent"
-              />
-            </div>
-            <div className="w-full flex flex-col">
-              <h1 
-              id="appointment"
-              className="text-xl">Subject</h1>
-              <input
-                type="text"
+                onChange={(e)=>{setEmail(e.target.value)}}
                 required
                 className="border-b py-2 px-3 white outline-none bg-transparent"
               />
@@ -103,6 +131,7 @@ const Contact = ({toast}) => {
               <h1 className="text-xl">Date</h1>
               <input
                 type="date"
+                onChange={(e)=>{setDate(e.target.value)}}
                 required
                 className="border-b py-2 px-3 white outline-none bg-transparent"
               />
@@ -111,18 +140,31 @@ const Contact = ({toast}) => {
               <h1 className="text-xl">Time</h1>
               <input
                 type="time"
+                onChange={(e)=>{setTime(e.target.value)}}
                 required
                 className="border-b py-2 px-3 white outline-none bg-transparent"
               />
             </div>
             <div className="w-full flex flex-col">
               <h1 className="text-xl">Message</h1>
-              <textarea className="border-b resize-none py-2 px-3 white outline-none bg-transparent"></textarea>
+              <textarea 
+                onChange={(e)=>{setMessage(e.target.value)}}
+              className="border-b resize-none py-2 px-3 white outline-none bg-transparent"></textarea>
             </div>
 
+          {
+            loading?
+            <button
+            disabled
+             class="px-4 py-4 font-medium tracking-wide text-white capitalize transition-colors bg-gray-200 rounded-lg cursor-not-allowed">
+                      Book Appointment
+                  </button>
+            :
             <button class="px-4 py-4 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-customblue rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
                       Book Appointment
                   </button>
+
+                  }
 
           </form>
         </div>
