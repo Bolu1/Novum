@@ -70,7 +70,7 @@ const Contact = ({toast}) => {
               </motion.p>
               </div>
           </div>
-          <div className="w-full h-60 space-y-3 max-w-[65rem] mx-auto  my-20">
+          <div className="w-full h-66 space-y-3 max-w-[65rem] mx-auto  my-20">
           <div className="w-full items-center text-lg flex space-x-4">
               <IoLocationSharp className="w-6 h-6" />
               <p className="text:xs">Address: 1404 Crain Highway South Suite 112 Glen Burnie MD 21061</p>
