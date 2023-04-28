@@ -18,7 +18,7 @@ class="flex  ">
              bg-customblue/90 backdrop-brightness-100">
                       <AnimatePresence exitBeforeEnter>
         <div className="w-full h-full lg:flex items-center justify-center">
-          <div className="w-full min-h-[59rem] max-w-[69rem] relative lg:flex  py-10 pt-10  text-black">
+          <div className="w-full min-h-[59rem] max-w-[95rem] relative lg:flex  py-10 pt-10  text-black">
             <div className="w-full h-full  ">
               <div className="w-full ">
                 <motion.h1

@@ -2,6 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from "react-icons/ai";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { eventWrapper } from "@testing-library/user-event/dist/utils";
+import heart from "../../assets/images/home/heart.jpg"
+import grouphero from "../../assets/images/home/grouphero.jpg"
+
+
 const blinkVariants = {
   closed: {
     scaleY: 0,
@@ -126,11 +130,11 @@ const Hero = () => {
         {/* desktop */}
         {/* <SmoothScroll> */}
         {/* <div className="w- h-[45rem] lg:flex hidden mx-auto 2xl:max-w-[90rem] lg:max-w-[75rem]"> */}
-        <div className="h-[45rem] overflow-hidden relative  backdrop-brightness-80">
+        <div className="h-[45rem] lg:h-[30rem] overflow-hidden relative  backdrop-brightness-80">
           <div className="w-full h-full absolute">
             <img
               src={
-                "https://medicare.bold-themes.com/general-hospital/wp-content/uploads/sites/14/2018/03/bgn-general-hospital-01.jpg"
+                grouphero
               }
               alt=""
               className="w-full h-full object-cover brightness-50"
