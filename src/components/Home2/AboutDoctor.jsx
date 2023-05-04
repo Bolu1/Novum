@@ -20,7 +20,7 @@ const MyProjects = () => {
                         <div className="flex justify-start">
                         <div className="md:flex justify-between items-center max-w-[69rem]">
                         <div className="md:w-3/5">
-                        <p className="text-[49px] font-medum mb-5">About <span className="text-customblue font-bold">DR.Ojo</span></p>
+                        <p className="text-[49px] font-medum mb-5">About <span className=" font-bold">DR.Ojo</span></p>
                           <p className="">
                           Dr. Yeside Ojo, DNP, FNP-C, PMHNP-BC is a board-certified Psychiatric Nurse Practitioner whose aim is
 to provide client-centered care and treatments based on evidence-based guidelines by diagnosing

@@ -139,6 +139,29 @@ const Sidebar = ({ setIsSidebarOpen, isSidebarOpen }) => {
                   </motion.a>
                 </a>
               </motion.li>
+              <motion.li
+                variants={itemvariants}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                // animate={isSidebarOpen && "closed"}
+                onClick={() => {
+                  setIsSidebarOpen(!isSidebarOpen);
+                }}
+                className={`relative w-full mb-[1.5rem] ${
+                  location.pathname === "/" ? "activeLink" : ""
+                }`}
+              >
+<a
+            href="appointment"
+             className="">
+            <button
+            class="px-4 py-4 font-medium tracking-wide text-white  capitalize transition-colors duration-300 transform bg-black rounded-lg ">
+                    <p className="">
+                      Appointment
+                    </p>
+                  </button>
+            </a>
+              </motion.li>
             </motion.ul>
             <motion.div className="w-full  h-10 border-t border-t-gray-200"></motion.div>
           </motion.nav>

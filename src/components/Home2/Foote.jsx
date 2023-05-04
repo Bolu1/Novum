@@ -5,7 +5,7 @@ import dev from "../../assets/icons/dev.png";
 const Foote = () => {
   return (
     <div>
-      <div className="w-full px-8 py-8 bg-customblue text-white">
+      <div className="w-full px-8 py-8 bg-black text-white">
         <div className="w-full h-full mx-auto text-center max-w-[69rem]">
           <h1 className="text-2xl font-bold mb-4 ">
             Novum

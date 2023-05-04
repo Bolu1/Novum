@@ -29,9 +29,9 @@ const Navbar = () => {
           isScrolled && "bg-white text-black"
         }`}
       >
-        <div className="w-full h-[2rem] md:flex hidden flex justify-between items-center 2xl:max-w-[110rem] max-w-[85rem] mx-auto ">
+        <div className="w-full h-[3rem] md:flex hidden flex justify-between items-center 2xl:max-w-[110rem] max-w-[85rem] mx-auto ">
           <a 
-          href="#home"
+          href="/"
           className="md:flex hidden items-center space-x-2 md:space-x-10">
             <img
             className="h-15 w-20"
@@ -41,7 +41,7 @@ const Navbar = () => {
 
           <ul className="hidden items-center space-x-10 md:flex">
             <li className="headerLink">
-              <a href="#home">Home</a>
+              <a href="/">Home</a>
             </li>
             <li className="headerLink">
               <a href="#about">About</a>
@@ -52,6 +52,16 @@ const Navbar = () => {
             <li className="headerLink">
               <a href="#contact">Contact</a>
             </li>
+            <a
+            href="appointment"
+             className="">
+            <button
+            class="px-4 py-4 font-medium tracking-wide text-white  capitalize transition-colors duration-300 transform bg-black rounded-lg ">
+                    <p className="">
+                      Appointment
+                    </p>
+                  </button>
+            </a>
           </ul>
         </div>
         <div className="flex md:hidden justify-between items-center space-x-2 md:space-x-10">

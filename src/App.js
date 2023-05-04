@@ -3,7 +3,7 @@ import { lazy } from "react";
 import { Route, Routes, useLocation, useRoutes } from "react-router-dom";
 import SideLinks from "./global/SideLinks";
 import Spinner from "./global/Spinner";
-import About from "./Pages/About";
+import Appointment from "./Pages/Appointment";
 import Home from "./Pages/Home";
 
 // const routes = [{ path: "", element: <Home /> }];
@@ -15,7 +15,7 @@ function App() {
         <AnimatePresence mode="wait" initial={false}>
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
-            <Route path="about" element={<About />} />
+            <Route path="appointment" element={<Appointment />} />
           </Routes>
         </AnimatePresence>
       {/* <SideLinks /> */}

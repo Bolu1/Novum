@@ -130,11 +130,11 @@ const Hero = () => {
         {/* desktop */}
         {/* <SmoothScroll> */}
         {/* <div className="w- h-[45rem] lg:flex hidden mx-auto 2xl:max-w-[90rem] lg:max-w-[75rem]"> */}
-        <div className="h-[45rem] lg:h-[30rem] overflow-hidden relative  backdrop-brightness-80">
+        <div className="h-[45rem] overflow-hidden relative  backdrop-brightness-80">
           <div className="w-full h-full absolute">
             <img
               src={
-                grouphero
+                heart
               }
               alt=""
               className="w-full h-full object-cover brightness-50"
@@ -153,8 +153,8 @@ const Hero = () => {
               </p>
 
               <button
-               class="px-4 py-4 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-customblue rounded-lg hover:bg-blue-500 ">
-               <a href="#appointment">
+               class="px-4 py-4 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform border-2 rounded-lg  ">
+               <a href="appointment">
                 Book Appointment
                 </a>
               </button>
