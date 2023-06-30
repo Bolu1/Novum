@@ -24,7 +24,7 @@ const Contact = ({toast}) => {
     try{
 
       await axios.post(
-        `https://vcb-server.onrender.com/api/admin/novum/mail`,
+        `http://localhost:8000/api/admin/novum/mail`,
         {
           name,
           email,
