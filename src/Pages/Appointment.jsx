@@ -102,6 +102,9 @@ const About = () => {
   };
 
   const selectTimeHandler1 = () => {
+    if(selectTimeError){
+      toast.error("This time is unavailable please select another")
+    }
     setshowForm(true);
     setselectTime(false);
   };
