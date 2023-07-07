@@ -1,5 +1,5 @@
 import therapy from "../../assets/images/home/theraphy.jpg"
-import Doctorman from "../../assets/images/home/doctorman.png"
+import doctorwoman from "../../assets/images/home/doctorwoman.png"
 import medication from "../../assets/images/home/medication.jpg"
 import group from "../../assets/images/home/group.jpg"
 import React from "react";
@@ -20,7 +20,7 @@ const MyProjects = () => {
                         <div className="flex justify-start">
                         <div className="md:flex justify-between items-center max-w-[69rem]">
                         <div className="md:w-3/5">
-                        <p className="text-[49px] font-medum mb-5">About <span className=" font-bold">DR.Ojo</span></p>
+                        <p className="text-[49px] font-medum mb-5">About <span className=" font-bold">Dr. Yeside Ojo</span></p>
                           <p className="">
                           Dr. Yeside Ojo, DNP, FNP-C, PMHNP-BC is a board-certified Psychiatric Nurse Practitioner whose aim is
 to provide client-centered care and treatments based on evidence-based guidelines by diagnosing
@@ -41,7 +41,7 @@ Alcohol use disorder. A proven ability to work well as part of a team.
                           </div>
                           <div className="md:w-2/5">
                             <img
-                              src={Doctorman}
+                              src={doctorwoman}
                               className="w-[full] h-[35rem]"
                             />
                           </div>

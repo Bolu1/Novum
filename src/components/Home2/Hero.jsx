@@ -142,7 +142,7 @@ const Hero = () => {
           </div>
           <div className="absolute w-[90%]  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <h1 className="text-[50px] uppercase text-white font-extrabold">
-              Novum
+              Novum Health Services
             </h1>
             <div className=" mt-2 space-y-4">
               <p className="text-white text-lg w-2/3">
